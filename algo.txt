@@ -1,0 +1,6 @@
+check location
+    if location
+        get Now Waqt
+        get five time
+    else 
+        show location not found

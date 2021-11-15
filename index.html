@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--External Script & Stylesheet-->
+    <script src="PrayTimes.js"></script>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+    </style>
+
+    <!--Meta Tags-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Salaat Time Table">
+    <meta name="theme-color" content="#ecf0f1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--Page Tittle-->
+    <title>Salaat</title>
+</head>
+
+<body style="font-family: Calibri">
+    <script src="script.js"></script>
+
+    <div class="w3-display-topmiddle w3-card w3-padding-large w3-animate-top w3-bar w3-center">
+        <text class="w3-opacity w3-tiny w3-right">v2.0</text>
+        <text id="check" class="w3-large"></text>
+    </div>
+
+    <div class="w3-center w3-display-middle w3-half" id="result">
+        <h1 style="font-family: neo; text-shadow: 5px 1px 0 #444" class="w3-jumbo w3-animate-top">
+            <script>document.write(pName);</script>
+        </h1>
+        <p id="cd" style="font-family: orbit" class="w3-xlarge w3-animate-bottom">wiil ends in</p>
+        <br>
+        <table class="w3-table w3-animate-fading w3-opacity w3-centered w3-padding-32" id="r">
+            <tr class="w3-large">
+                <td style="padding:0; text-decoration-line: underline;"><b><i>Sunnah (Before)</i></b></td>
+                <td style="padding:0; text-decoration-line: underline;"><b><i>Fardh</i></b></td>
+                <td style="padding:0; text-decoration-line: underline;"><b><i>Sunnah (After)</i></b></td>
+            </tr>
+            <tr>
+                <td style="padding: 0">
+                    <script>
+                        if (pName == "Fajr") {
+                            document.write("2 Raka'as")
+                        }
+                        else if (pName == "Dhuhr") {
+                            document.write("4 Raka'as");
+                        }
+                        else if (pName == "Asr") {
+                            document.write("None");
+                        }
+                        else if (pName == "Maghrib") {
+                            document.write("None");
+                        }
+                        else if (pName == "Isha") {
+                            document.write("None");
+                        } else {
+                            document.getElementById("r").style.display = "none";
+                        }
+                    </script>
+                </td>
+                <td style="padding: 0">
+                    <script>
+                        if (pName == "Fajr") {
+                            document.write("2 Raka'as")
+                        }
+                        else if (pName == "Dhuhr") {
+                            document.write("4 Raka'as");
+                        }
+                        else if (pName == "Asr") {
+                            document.write("4 Raka'as");
+                        }
+                        else if (pName == "Maghrib") {
+                            document.write("3 Raka'as");
+                        }
+                        else if (pName == "Isha") {
+                            document.write("4 Raka'as");
+                        } else {
+                            document.getElementById("r").style.display = "none";
+                        }
+                    </script>
+                </td>
+                <td style="padding: 0">
+                    <script>
+                        if (pName == "Fajr") {
+                            document.write("None")
+                        }
+                        else if (pName == "Dhuhr") {
+                            document.write("2 Raka'as");
+                        }
+                        else if (pName == "Asr") {
+                            document.write("None");
+                        }
+                        else if (pName == "Maghrib") {
+                            document.write("2 Raka'as");
+                        }
+                        else if (pName == "Isha") {
+                            document.write("2 Raka'as");
+                        } else {
+                            document.getElementById("r").style.display = "none";
+                        }
+                    </script>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!--Modal Button-->
+    <button
+        onclick="document.getElementById('table').style.display='block'; document.getElementById('result').style.display='none';"
+        class=" w3-btn w3-display-bottommiddle w3-bar w3-xlarge w3-card-4" style="font-family: neo; outline:0">Time
+        Table</button>
+
+    <!--Modal-->
+    <div id="table" class="w3-modal">
+        <div class="w3-content w3-animate-bottom " style="opacity:0.9">
+            <div class="w3-container w3-padding-16 w3-flat-clouds w3-center">
+                <h1><b>Salaat Time Table</b></h1>
+                <table class="w3-table w3-bordered w3-padding w3-large w3-striped w3-centered"
+                    style=" font-weight: bold;">
+                    <tr>
+                        <td>Imsak</td>
+                        <td>
+                            <script>document.write(imsak);</script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fajr</td>
+                        <td>
+                            <script>document.write(fajr);</script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sunrise</td>
+                        <td>
+                            <script>document.write(sunrise);</script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dhuhr</td>
+                        <td>
+                            <script>document.write(dhuhr);</script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Asr</td>
+                        <td>
+                            <script>document.write(asr);</script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Maghrib</td>
+                        <td>
+                            <script>document.write(maghrib);</script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Isha</td>
+                        <td>
+                            <script>document.write(isha);</script>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="w3-center w3-margin w3-padding">
+                <span
+                    onclick="document.getElementById('table').style.display='none'; document.getElementById('result').style.display='block';"
+                    class="w3-btn w3-card w3-flat-clouds w3-round-xxlarge w3-xxlarge ">&times;</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        //register the service worker when page loads
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service.js');
+        });
+    </script>
+</body>
+
+</html>
